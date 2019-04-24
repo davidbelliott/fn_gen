@@ -1,0 +1,214 @@
+EESchema Schematic File Version 4
+LIBS:fn_gen-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Amplifier_Operational:LM741 U1
+U 1 1 5CC15EFD
+P 2750 2650
+F 0 "U1" H 3094 2604 50  0000 L CNN
+F 1 "LM741" H 3094 2695 50  0000 L CNN
+F 2 "" H 2800 2700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm741.pdf" H 2900 2800 50  0001 C CNN
+F 4 "X" H 2750 2650 50  0001 C CNN "Spice_Primitive"
+F 5 "LM741/NS" H 2750 2650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2750 2650 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/david/gdrive/classes/ee_90/fn_gen/schematics/lib/LM741.MOD" H 2750 2650 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 7 4 6" H 2750 2650 50  0001 C CNN "Spice_Node_Sequence"
+	1    2750 2650
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3300 2650 3100 2650
+Connection ~ 3100 2650
+Wire Wire Line
+	3100 2650 3050 2650
+Wire Wire Line
+	2350 2750 2450 2750
+Wire Wire Line
+	3100 2650 3100 3600
+Wire Wire Line
+	2350 3600 2350 2750
+Wire Wire Line
+	2800 3600 3100 3600
+Wire Wire Line
+	2500 3600 2350 3600
+$Comp
+L Device:R R1
+U 1 1 5CC175B0
+P 2650 3600
+F 0 "R1" V 2443 3600 50  0000 C CNN
+F 1 "10k" V 2534 3600 50  0000 C CNN
+F 2 "" V 2580 3600 50  0001 C CNN
+F 3 "~" H 2650 3600 50  0001 C CNN
+	1    2650 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5CC194A4
+P 2150 2950
+F 0 "#PWR01" H 2150 2700 50  0001 C CNN
+F 1 "GND" H 2155 2777 50  0000 C CNN
+F 2 "" H 2150 2950 50  0001 C CNN
+F 3 "" H 2150 2950 50  0001 C CNN
+	1    2150 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR03
+U 1 1 5CC19B14
+P 2650 2950
+F 0 "#PWR03" H 2650 2800 50  0001 C CNN
+F 1 "+12V" H 2665 3123 50  0000 C CNN
+F 2 "" H 2650 2950 50  0001 C CNN
+F 3 "" H 2650 2950 50  0001 C CNN
+	1    2650 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:-12V #PWR02
+U 1 1 5CC1A6D6
+P 2650 2350
+F 0 "#PWR02" H 2650 2450 50  0001 C CNN
+F 1 "-12V" H 2665 2523 50  0000 C CNN
+F 2 "" H 2650 2350 50  0001 C CNN
+F 3 "" H 2650 2350 50  0001 C CNN
+	1    2650 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR06
+U 1 1 5CC1AF49
+P 2750 5750
+F 0 "#PWR06" H 2750 5850 50  0001 C CNN
+F 1 "-12V" H 2765 5923 50  0000 C CNN
+F 2 "" H 2750 5750 50  0001 C CNN
+F 3 "" H 2750 5750 50  0001 C CNN
+	1    2750 5750
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR04
+U 1 1 5CC1B444
+P 2750 4550
+F 0 "#PWR04" H 2750 4400 50  0001 C CNN
+F 1 "+12V" H 2765 4723 50  0000 C CNN
+F 2 "" H 2750 4550 50  0001 C CNN
+F 3 "" H 2750 4550 50  0001 C CNN
+	1    2750 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:VSOURCE V1
+U 1 1 5CC1BC76
+P 2750 4850
+F 0 "V1" H 2978 4896 50  0000 L CNN
+F 1 "dc 12" H 2978 4805 50  0000 L CNN
+F 2 "" H 2750 4850 50  0001 C CNN
+F 3 "~" H 2750 4850 50  0001 C CNN
+F 4 "V" H 2750 4850 50  0001 C CNN "Spice_Primitive"
+F 5 "dc 12" H 2750 4850 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2750 4850 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2750 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:VSOURCE V2
+U 1 1 5CC1BEC7
+P 2750 5450
+F 0 "V2" H 2978 5496 50  0000 L CNN
+F 1 "dc 12" H 2978 5405 50  0000 L CNN
+F 2 "" H 2750 5450 50  0001 C CNN
+F 3 "~" H 2750 5450 50  0001 C CNN
+F 4 "V" H 2750 5450 50  0001 C CNN "Spice_Primitive"
+F 5 "dc 12" H 2750 5450 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2750 5450 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2750 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5CC1E19B
+P 2750 5150
+F 0 "#PWR05" H 2750 4900 50  0001 C CNN
+F 1 "GND" V 2755 5022 50  0000 R CNN
+F 2 "" H 2750 5150 50  0001 C CNN
+F 3 "" H 2750 5150 50  0001 C CNN
+	1    2750 5150
+	0    -1   -1   0   
+$EndComp
+Connection ~ 2750 5150
+Wire Wire Line
+	2150 2550 2300 2550
+$Comp
+L Device:R R2
+U 1 1 5CC14E6A
+P 2350 3750
+F 0 "R2" V 2143 3750 50  0000 C CNN
+F 1 "10k" V 2234 3750 50  0000 C CNN
+F 2 "" V 2280 3750 50  0001 C CNN
+F 3 "~" H 2350 3750 50  0001 C CNN
+	1    2350 3750
+	-1   0    0    1   
+$EndComp
+Connection ~ 2350 3600
+$Comp
+L power:GND #PWR07
+U 1 1 5CC1532E
+P 2350 3900
+F 0 "#PWR07" H 2350 3650 50  0001 C CNN
+F 1 "GND" H 2355 3727 50  0000 C CNN
+F 2 "" H 2350 3900 50  0001 C CNN
+F 3 "" H 2350 3900 50  0001 C CNN
+	1    2350 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 2850 2150 2950
+$Comp
+L Device:R R3
+U 1 1 5CC1629E
+P 2700 2000
+F 0 "R3" V 2493 2000 50  0000 C CNN
+F 1 "10k" V 2584 2000 50  0000 C CNN
+F 2 "" V 2630 2000 50  0001 C CNN
+F 3 "~" H 2700 2000 50  0001 C CNN
+	1    2700 2000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2850 2000 3100 2000
+Wire Wire Line
+	3100 2000 3100 2650
+Wire Wire Line
+	2550 2000 2300 2000
+Wire Wire Line
+	2300 2000 2300 2550
+Connection ~ 2300 2550
+Wire Wire Line
+	2300 2550 2450 2550
+$Comp
+L Device:C C1
+U 0 0 5CC15ACE
+P 2150 2700
+F 0 "C1" H 2265 2746 50  0000 L CNN
+F 1 "0.1u" H 2265 2655 50  0000 L CNN
+F 2 "" H 2188 2550 50  0001 C CNN
+F 3 "~" H 2150 2700 50  0001 C CNN
+	0    2150 2700
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
