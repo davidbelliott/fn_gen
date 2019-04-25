@@ -1,0 +1,338 @@
+EESchema Schematic File Version 4
+LIBS:fn_gen-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L pspice:VSOURCE V1
+U 1 1 5CCA75F2
+P 1550 1450
+F 0 "V1" H 1778 1496 50  0000 L CNN
+F 1 "12" H 1778 1405 50  0000 L CNN
+F 2 "" H 1550 1450 50  0001 C CNN
+F 3 "~" H 1550 1450 50  0001 C CNN
+	1    1550 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:VSOURCE V2
+U 1 1 5CCA75F8
+P 1550 2050
+F 0 "V2" H 1778 2096 50  0000 L CNN
+F 1 "12" H 1778 2005 50  0000 L CNN
+F 2 "" H 1550 2050 50  0001 C CNN
+F 3 "~" H 1550 2050 50  0001 C CNN
+	1    1550 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 1750 2300 1750
+Wire Wire Line
+	2300 1750 2300 1850
+Connection ~ 1550 1750
+$Comp
+L power:GND #PWR019
+U 1 1 5CCA7601
+P 2300 1850
+F 0 "#PWR019" H 2300 1600 50  0001 C CNN
+F 1 "GND" H 2305 1677 50  0000 C CNN
+F 2 "" H 2300 1850 50  0001 C CNN
+F 3 "" H 2300 1850 50  0001 C CNN
+	1    2300 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR017
+U 1 1 5CCA7607
+P 1550 1150
+F 0 "#PWR017" H 1550 1000 50  0001 C CNN
+F 1 "+12V" H 1565 1323 50  0000 C CNN
+F 2 "" H 1550 1150 50  0001 C CNN
+F 3 "" H 1550 1150 50  0001 C CNN
+	1    1550 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR018
+U 1 1 5CCA760D
+P 1550 2350
+F 0 "#PWR018" H 1550 2450 50  0001 C CNN
+F 1 "-12V" H 1565 2523 50  0000 C CNN
+F 2 "" H 1550 2350 50  0001 C CNN
+F 3 "" H 1550 2350 50  0001 C CNN
+	1    1550 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5CCC433C
+P 4400 4300
+AR Path="/5CC135C7/5CCC433C" Ref="#PWR?"  Part="1" 
+AR Path="/5CC1938B/5CCC433C" Ref="#PWR022"  Part="1" 
+F 0 "#PWR022" H 4400 4150 50  0001 C CNN
+F 1 "+12V" H 4415 4473 50  0000 C CNN
+F 2 "" H 4400 4300 50  0001 C CNN
+F 3 "" H 4400 4300 50  0001 C CNN
+	1    4400 4300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 5CCCAE2D
+P 3900 4300
+F 0 "#PWR020" H 3900 4050 50  0001 C CNN
+F 1 "GND" H 3905 4127 50  0000 C CNN
+F 2 "" H 3900 4300 50  0001 C CNN
+F 3 "" H 3900 4300 50  0001 C CNN
+	1    3900 4300
+	1    0    0    -1  
+$EndComp
+Text HLabel 5200 4200 0    50   Input ~ 0
+DC_OFFSET
+Wire Wire Line
+	3900 4100 3900 4300
+Wire Wire Line
+	4950 4000 5200 4000
+Connection ~ 4950 4000
+Wire Wire Line
+	4050 3900 4200 3900
+Connection ~ 4050 3900
+Wire Wire Line
+	4800 4000 4950 4000
+Wire Wire Line
+	3900 4100 4200 4100
+$Comp
+L Device:R R16
+U 1 0 5CCC7FE2
+P 3600 3900
+F 0 "R16" V 3393 3900 50  0000 C CNN
+F 1 "5k" V 3484 3900 50  0000 C CNN
+F 2 "" V 3530 3900 50  0001 C CNN
+F 3 "~" H 3600 3900 50  0001 C CNN
+	1    3600 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 3900 4050 3900
+$Comp
+L Amplifier_Operational:OPA843xD U?
+U 1 1 5CCC4342
+P 4500 4000
+AR Path="/5CC135C7/5CCC4342" Ref="U?"  Part="1" 
+AR Path="/5CC1938B/5CCC4342" Ref="U5"  Part="1" 
+F 0 "U5" H 4550 3700 50  0000 C CNN
+F 1 "OPA843xD" H 4700 3800 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4400 3800 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa843.pdf" H 4650 4150 50  0001 C CNN
+	1    4500 4000
+	1    0    0    1   
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5CCC4336
+P 4400 3700
+AR Path="/5CC135C7/5CCC4336" Ref="#PWR?"  Part="1" 
+AR Path="/5CC1938B/5CCC4336" Ref="#PWR021"  Part="1" 
+F 0 "#PWR021" H 4400 3800 50  0001 C CNN
+F 1 "-12V" H 4415 3873 50  0000 C CNN
+F 2 "" H 4400 3700 50  0001 C CNN
+F 3 "" H 4400 3700 50  0001 C CNN
+	1    4400 3700
+	1    0    0    -1  
+$EndComp
+Text HLabel 2850 4050 0    50   Input ~ 0
+PWM
+Text HLabel 2850 3950 0    50   Input ~ 0
+TRIANGLE
+Text HLabel 2850 3850 0    50   Input ~ 0
+SQUARE
+Text HLabel 2850 3750 0    50   Input ~ 0
+SINE
+$Comp
+L fn_gen:SW_SP4T SW1
+U 1 1 5CCBBC30
+P 3150 3900
+F 0 "SW1" H 3150 3555 50  0000 C CNN
+F 1 "SW_SP4T" H 3150 3646 50  0000 C CNN
+F 2 "" H 3250 4100 50  0001 C CNN
+F 3 "" H 3250 4100 50  0001 C CNN
+	1    3150 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:OPA843xD U?
+U 1 1 5CCDFA70
+P 6150 4100
+AR Path="/5CC135C7/5CCDFA70" Ref="U?"  Part="1" 
+AR Path="/5CC1938B/5CCDFA70" Ref="U6"  Part="1" 
+F 0 "U6" H 6200 3800 50  0000 C CNN
+F 1 "OPA843xD" H 6350 3900 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6050 3900 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa843.pdf" H 6300 4250 50  0001 C CNN
+	1    6150 4100
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R17
+U 1 0 5CCE1648
+P 5350 4000
+F 0 "R17" V 5143 4000 50  0000 C CNN
+F 1 "5k" V 5234 4000 50  0000 C CNN
+F 2 "" V 5280 4000 50  0001 C CNN
+F 3 "~" H 5350 4000 50  0001 C CNN
+	1    5350 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5500 4000 5700 4000
+$Comp
+L Device:R R18
+U 1 0 5CCE2994
+P 5350 4200
+F 0 "R18" V 5450 4200 50  0000 C CNN
+F 1 "5k" V 5550 4200 50  0000 C CNN
+F 2 "" V 5280 4200 50  0001 C CNN
+F 3 "~" H 5350 4200 50  0001 C CNN
+	1    5350 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5500 4200 5850 4200
+$Comp
+L power:+12V #PWR?
+U 1 1 5CCE3892
+P 6050 4400
+AR Path="/5CC135C7/5CCE3892" Ref="#PWR?"  Part="1" 
+AR Path="/5CC1938B/5CCE3892" Ref="#PWR024"  Part="1" 
+F 0 "#PWR024" H 6050 4250 50  0001 C CNN
+F 1 "+12V" H 6065 4573 50  0000 C CNN
+F 2 "" H 6050 4400 50  0001 C CNN
+F 3 "" H 6050 4400 50  0001 C CNN
+	1    6050 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5CCE3BF2
+P 6050 3800
+AR Path="/5CC135C7/5CCE3BF2" Ref="#PWR?"  Part="1" 
+AR Path="/5CC1938B/5CCE3BF2" Ref="#PWR023"  Part="1" 
+F 0 "#PWR023" H 6050 3900 50  0001 C CNN
+F 1 "-12V" H 6065 3973 50  0000 C CNN
+F 2 "" H 6050 3800 50  0001 C CNN
+F 3 "" H 6050 3800 50  0001 C CNN
+	1    6050 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R19
+U 1 0 5CCE443C
+P 6050 3450
+F 0 "R19" V 5843 3450 50  0000 C CNN
+F 1 "5k" V 5934 3450 50  0000 C CNN
+F 2 "" V 5980 3450 50  0001 C CNN
+F 3 "~" H 6050 3450 50  0001 C CNN
+	1    6050 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5900 3450 5700 3450
+Wire Wire Line
+	5700 3450 5700 4000
+Connection ~ 5700 4000
+Wire Wire Line
+	5700 4000 5850 4000
+Wire Wire Line
+	6450 4100 6650 4100
+Wire Wire Line
+	6200 3450 6650 3450
+Wire Wire Line
+	6650 3450 6650 4100
+Connection ~ 6650 4100
+Wire Wire Line
+	6650 4100 7200 4100
+$Comp
+L Amplifier_Operational:OPA843xD U?
+U 1 1 5CCE55B6
+P 7500 4200
+AR Path="/5CC135C7/5CCE55B6" Ref="U?"  Part="1" 
+AR Path="/5CC1938B/5CCE55B6" Ref="U7"  Part="1" 
+F 0 "U7" H 7550 3900 50  0000 C CNN
+F 1 "OPA843xD" H 7700 4000 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7400 4000 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa843.pdf" H 7650 4350 50  0001 C CNN
+	1    7500 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 4200 8100 4200
+Wire Wire Line
+	7200 4300 7000 4300
+Wire Wire Line
+	7000 4300 7000 4950
+Wire Wire Line
+	7000 4950 8100 4950
+Wire Wire Line
+	8100 4950 8100 4200
+Connection ~ 8100 4200
+Wire Wire Line
+	8100 4200 8500 4200
+$Comp
+L power:+12V #PWR?
+U 1 1 5CCE8BE9
+P 7400 3900
+AR Path="/5CC135C7/5CCE8BE9" Ref="#PWR?"  Part="1" 
+AR Path="/5CC1938B/5CCE8BE9" Ref="#PWR025"  Part="1" 
+F 0 "#PWR025" H 7400 3750 50  0001 C CNN
+F 1 "+12V" H 7415 4073 50  0000 C CNN
+F 2 "" H 7400 3900 50  0001 C CNN
+F 3 "" H 7400 3900 50  0001 C CNN
+	1    7400 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5CCE9102
+P 7400 4500
+AR Path="/5CC135C7/5CCE9102" Ref="#PWR?"  Part="1" 
+AR Path="/5CC1938B/5CCE9102" Ref="#PWR026"  Part="1" 
+F 0 "#PWR026" H 7400 4600 50  0001 C CNN
+F 1 "-12V" H 7415 4673 50  0000 C CNN
+F 2 "" H 7400 4500 50  0001 C CNN
+F 3 "" H 7400 4500 50  0001 C CNN
+	1    7400 4500
+	-1   0    0    1   
+$EndComp
+Text HLabel 8500 4200 2    50   Output ~ 0
+OUTPUT
+$Comp
+L Device:R_POT RV1
+U 1 1 5CCEEB02
+P 4400 3200
+F 0 "RV1" V 4285 3200 50  0000 C CNN
+F 1 "R_POT_10k" V 4194 3200 50  0000 C CNN
+F 2 "" H 4400 3200 50  0001 C CNN
+F 3 "~" H 4400 3200 50  0001 C CNN
+	1    4400 3200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4400 3050 4950 3050
+Wire Wire Line
+	4950 3050 4950 4000
+Wire Wire Line
+	4250 3200 4050 3200
+Wire Wire Line
+	4050 3200 4050 3900
+$EndSCHEMATC
